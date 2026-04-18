@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>花青果｜職人桑椹果粒原汁</title>
+    <meta
+      name="description"
+      content="花青果職人桑椹果粒原汁，以純白、植物綠與鮮紫打造的高質感一頁式訂購頁。"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@500;700;900&display=swap");
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pure: "#FFFFFF",
+              ink: "#1A2E1A",
+              leaf: "#2E7D32",
+              sprout: "#4CAF50",
+              berry: "#673AB7",
+              mint: "#EAF7EA",
+              dew: "#F4FFF4",
+              lilac: "#F4EEFF",
+              lavender: "#ECE3FF",
+            },
+            fontFamily: {
+              sans: ['"Noto Sans TC"', '"PingFang TC"', '"Microsoft JhengHei"', "sans-serif"],
+              serif: ['"Noto Serif TC"', "serif"],
+            },
+            boxShadow: {
+              float: "0 28px 80px rgba(46, 125, 50, 0.10)",
+              panel: "0 18px 44px rgba(103, 58, 183, 0.08)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background:
+          radial-gradient(circle at top left, rgba(76, 175, 80, 0.12), transparent 22%),
+          radial-gradient(circle at top right, rgba(103, 58, 183, 0.08), transparent 20%),
+          linear-gradient(180deg, rgba(234, 247, 234, 0.62), rgba(255, 255, 255, 0) 24%),
+          #ffffff;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(36px) scale(0.98);
+        transition:
+          opacity 0.9s ease,
+          transform 0.9s ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      .hero-halo::before {
+        content: "";
+        position: absolute;
+        inset: -10%;
+        background:
+          radial-gradient(circle, rgba(76, 175, 80, 0.18), transparent 34%),
+          radial-gradient(circle at 70% 30%, rgba(103, 58, 183, 0.14), transparent 36%);
+        filter: blur(18px);
+        z-index: 0;
+      }
+
+      .field-band {
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 420px;
+        background:
+          linear-gradient(180deg, rgba(46, 125, 50, 0.86), rgba(76, 175, 80, 0.56) 44%, rgba(255, 255, 255, 0)),
+          linear-gradient(90deg, rgba(26, 46, 26, 0.22), rgba(26, 46, 26, 0)),
+          url("./hero-mulberry-ai.png");
+        background-size: cover;
+        background-position: center top;
+        filter: saturate(0.86) brightness(1.02);
+      }
+
+      .hero-readable-card {
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(26, 46, 26, 0.48);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+
+      .experience-scene {
+        position: relative;
+        background-image:
+          linear-gradient(135deg, rgba(26, 46, 26, 0.82), rgba(46, 125, 50, 0.54)),
+          url("./experience-orchard-ai.png");
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+      }
+
+      .experience-scene::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.12), transparent 24%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
+        pointer-events: none;
+      }
+
+      .magazine-line {
+        position: relative;
+      }
+
+      .magazine-line::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.8rem;
+        width: 5rem;
+        height: 3px;
+        background: linear-gradient(90deg, #4caf50, #673ab7);
+      }
+
+      .founder-glow {
+        position: relative;
+      }
+
+      .founder-glow::before {
+        content: "";
+        position: absolute;
+        inset: 8% -6% -10% 10%;
+        background:
+          radial-gradient(circle, rgba(76, 175, 80, 0.18), transparent 46%),
+          radial-gradient(circle at 70% 28%, rgba(103, 58, 183, 0.12), transparent 40%);
+        filter: blur(18px);
+        z-index: 0;
+      }
+
+      .founder-soft-cut {
+        filter: brightness(1.12) contrast(1.08) saturate(0.84) sepia(0.06);
+        mask-image: radial-gradient(circle at center, black 68%, transparent 100%);
+        -webkit-mask-image: radial-gradient(circle at center, black 68%, transparent 100%);
+      }
+
+      .founder-soft-blur {
+        filter: blur(18px) brightness(1.16) saturate(0.78);
+        opacity: 0.38;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-[18px] leading-[1.8] text-ink">
+    <div class="relative overflow-hidden">
+      <div class="field-band"></div>
+
+      <div class="relative z-10 mx-auto max-w-[1400px] px-5 pb-24 pt-6 sm:px-8 lg:px-10">
+        <header class="mb-8 flex items-center justify-between">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.4em] text-white/90">Plant Driven Visual</p>
+            <p class="mt-2 font-serif text-xl font-bold tracking-[0.14em] text-white">花青果</p>
+          </div>
+          <a
+            href="#order"
+            class="inline-flex items-center rounded-full border border-white/40 bg-white px-5 py-3 text-base font-semibold text-leaf shadow-panel transition hover:bg-dew"
+          >
+            立即下單
+          </a>
+        </header>
+
+        <main class="space-y-16 sm:space-y-24">
+          <section class="relative pt-6 lg:pt-10">
+            <div class="rounded-[2.7rem] border border-white/80 bg-white/92 p-4 shadow-float sm:p-6 lg:p-8">
+              <div class="grid grid-cols-12 gap-y-8 lg:gap-x-8">
+                <div class="col-span-12 lg:col-span-7">
+                  <div class="hero-halo relative reveal">
+                    <div class="relative z-10 overflow-hidden rounded-[2.5rem] border border-sprout/10 bg-white p-3 shadow-float sm:p-4">
+                      <div class="relative overflow-hidden rounded-[2rem] bg-white">
+                        <img
+                          id="heroImage"
+                          src="./hero-mulberry-ai.png"
+                          alt="一整碗濃郁果粒傾倒而下的桑椹果粒原汁"
+                          class="h-[430px] w-full object-cover object-center sm:h-[580px]"
+                        />
+                        <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(26,46,26,0.08),rgba(26,46,26,0.22)_36%,rgba(26,46,26,0.72)_100%)]"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-10">
+                          <div class="hero-readable-card max-w-md rounded-[1.8rem] p-5 text-white shadow-panel">
+                            <p class="text-sm font-semibold uppercase tracking-[0.32em] text-white/76">Hero Shot</p>
+                            <p class="mt-3 text-lg leading-[1.8] text-white">
+                              一整碗濃郁果粒傾倒而下，果肉感、濃度感、光澤感都看得見，視覺焦點只留給桑葚本身。
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-span-12 lg:col-span-6 lg:col-start-7 lg:-ml-16 lg:mt-20">
+                  <div class="relative z-20 reveal rounded-[2.25rem] border border-sprout/10 bg-white p-7 shadow-float sm:p-10">
+                    <p class="text-sm font-semibold uppercase tracking-[0.4em] text-leaf">實在、接地氣、職人感</p>
+                    <h1
+                      class="mt-5 font-serif text-4xl font-black leading-[1.2] tracking-[0.12em] text-ink sm:text-5xl lg:text-[3.6rem]"
+                    >
+                      抱歉，
+                      <span class="mt-2 block rounded-[1.6rem] bg-mint px-3 py-2 text-berry lg:-ml-14 lg:inline-block">
+                        除了品質
+                      </span>
+                      <span class="mt-3 block">我們沒什麼好炫耀的了。</span>
+                    </h1>
+                    <p class="magazine-line mt-6 max-w-xl text-lg text-ink sm:text-xl">
+                      15年老欉、100%不加水、無防腐劑。這就是「花青果」的全部。把力氣留在原料和熬煮，不留在話術。
+                    </p>
+
+                    <div class="mt-10 grid gap-4 sm:grid-cols-3">
+                      <article class="rounded-[1.6rem] bg-dew p-5">
+                        <p class="text-sm font-semibold text-leaf">庫存狀態</p>
+                        <p id="stockStatus" class="mt-2 text-2xl font-bold text-ink">讀取中...</p>
+                      </article>
+                      <article class="rounded-[1.6rem] bg-dew p-5">
+                        <p class="text-sm font-semibold text-leaf">每罐含量</p>
+                        <p class="mt-2 text-2xl font-bold text-ink">1.5斤鮮果</p>
+                      </article>
+                      <article class="rounded-[1.6rem] bg-dew p-5">
+                        <p class="text-sm font-semibold text-leaf">冷凍保鮮</p>
+                        <p class="mt-2 text-2xl font-bold text-ink">-18°C急凍</p>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8 grid grid-cols-12 gap-4 lg:-mt-8">
+                <div class="col-span-12 md:col-span-8 lg:col-span-4 lg:col-start-2">
+                  <div class="reveal rounded-[2rem] border border-sprout/10 bg-white p-6 shadow-panel">
+                    <p class="text-sm font-semibold uppercase tracking-[0.35em] text-leaf">品牌調性</p>
+                    <p class="mt-3 text-lg">
+                      不是沉重農產風，也不是空泛精品風，而是一種從植物長出來的清爽信任感。白底、留白、綠色呼吸，讓桑葚的濃度自己發聲。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="relative">
+            <div class="grid grid-cols-12 gap-y-6 lg:gap-x-8">
+              <div class="col-span-12 lg:col-span-5">
+                <div class="reveal sticky top-6 rounded-[2.3rem] border border-sprout/10 bg-white p-8 shadow-float">
+                  <p class="text-sm font-semibold uppercase tracking-[0.35em] text-leaf">Truthful Facts</p>
+                  <h2 class="mt-4 font-serif text-3xl font-black leading-[1.3] tracking-[0.1em] text-ink sm:text-4xl">
+                    我們不過度包裝，
+                    <span class="block text-leaf">只把果汁做好</span>
+                  </h2>
+                  <p class="mt-5 text-lg">
+                    嘉義義竹鄉老欉鮮採，採後急速冷凍，盡量保留果實原本的狀態。每一罐使用足量 A 級鮮果與冰晶糖慢熬，不摻水、不走捷徑。
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-span-12 lg:col-span-7">
+                <div class="reveal grid gap-4 sm:grid-cols-2">
+                  <article class="rounded-[2rem] border border-sprout/10 bg-white p-6 shadow-panel sm:translate-y-8">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-leaf">產地與原料</p>
+                    <p class="mt-4 font-serif text-2xl font-bold tracking-[0.08em] text-ink">嘉義義竹鄉老欉鮮採</p>
+                    <p class="mt-3">原料從源頭就有辨識度，不拿次級果混充。</p>
+                  </article>
+                  <article class="rounded-[2rem] border border-sprout/10 bg-mint p-6 shadow-panel">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-leaf">保鮮處理</p>
+                    <p class="mt-4 font-serif text-2xl font-bold tracking-[0.08em] text-ink">-18°C 急速冷凍</p>
+                    <p class="mt-3">先把鮮果狀態保住，再談後續熬煮品質。</p>
+                  </article>
+                  <article class="rounded-[2rem] border border-berry/10 bg-lilac p-6 shadow-panel">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-berry">高濃度關鍵</p>
+                    <p class="mt-4 font-serif text-2xl font-bold tracking-[0.08em] text-ink">每罐 1.5 斤 A 級鮮果</p>
+                    <p class="mt-3">濃郁感不是調出來的，是果量堆出來的。</p>
+                  </article>
+                  <article class="rounded-[2rem] border border-sprout/10 bg-white p-6 shadow-panel sm:-translate-y-8">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-leaf">熬煮方式</p>
+                    <p class="mt-4 font-serif text-2xl font-bold tracking-[0.08em] text-ink">純冰晶糖慢熬</p>
+                    <p class="mt-3">不靠香精與濃縮液，味道就回到果本身。</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="about-founder" class="relative">
+            <div class="grid grid-cols-12 gap-y-8 lg:gap-x-8">
+              <div class="col-span-12 lg:col-span-7">
+                <div class="founder-glow reveal relative">
+                  <div class="relative z-10">
+                    <div class="absolute left-6 top-6 h-[86%] w-[72%] rounded-[2.2rem] bg-lilac founder-soft-blur"></div>
+                    <div class="relative overflow-hidden rounded-[2.6rem] border border-sprout/10 bg-white p-4 shadow-float">
+                      <div class="relative overflow-hidden rounded-[2.1rem] bg-dew">
+                        <img
+                          src="./林志隆.jpg"
+                          alt="中研新村社區發展協會 林志隆理事長"
+                          class="founder-soft-cut h-[420px] w-full object-cover object-center sm:h-[520px]"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-white/18 via-transparent to-white/10"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-span-12 lg:col-span-6 lg:col-start-7 lg:-ml-8 lg:pt-20">
+                <div class="reveal relative z-20 rounded-[2.3rem] border border-sprout/10 bg-white p-7 shadow-float sm:p-10">
+                  <div class="absolute -left-4 top-8 h-28 w-28 rounded-full bg-mint blur-2xl"></div>
+                  <p class="relative text-sm font-semibold uppercase tracking-[0.35em] text-leaf">About Founder</p>
+                  <h2 class="relative mt-4 font-serif text-3xl font-black leading-[1.35] tracking-[0.1em] text-ink sm:text-4xl">
+                    林理事長，
+                    <span class="block text-berry">把自然帶進社區</span>
+                  </h2>
+                  <p class="relative mt-5 text-lg font-semibold text-leaf">
+                    中研新村社區發展協會 林志隆理事長
+                  </p>
+                  <p class="relative mt-5 text-lg">
+                    「活化長者身心靈」的核心在於健康，因此他積極推動改變長者固執的舊思想，將這份來自嘉義老欉、最天然的「花青果」帶入社區，作為活化身心的自然良藥。
+                  </p>
+                  <div class="relative mt-7 grid gap-4 sm:grid-cols-2">
+                    <article class="rounded-[1.6rem] bg-mint p-5">
+                      <p class="text-sm font-semibold uppercase tracking-[0.24em] text-leaf">信任來源</p>
+                      <p class="mt-3 font-serif text-2xl font-bold text-ink">社區推動者</p>
+                    </article>
+                    <article class="rounded-[1.6rem] bg-lilac p-5">
+                      <p class="text-sm font-semibold uppercase tracking-[0.24em] text-berry">行動核心</p>
+                      <p class="mt-3 font-serif text-2xl font-bold text-ink">健康與活化</p>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="relative">
+            <div class="grid grid-cols-12 gap-y-8 lg:gap-x-8">
+              <div class="col-span-12 lg:col-span-7">
+                <div class="reveal overflow-hidden rounded-[2.5rem] border border-sprout/10 bg-white shadow-float">
+                  <div class="grid md:grid-cols-[0.95fr_1.05fr]">
+                    <div class="experience-scene p-8 text-white sm:p-10">
+                      <div class="relative z-10">
+                      <p class="text-sm font-semibold uppercase tracking-[0.35em] text-white/82">Experience</p>
+                      <h2 class="mt-4 font-serif text-3xl font-black leading-[1.35] tracking-[0.1em] sm:text-4xl">
+                        不是奇蹟，
+                        <span class="block text-white">是天然植化素的積累</span>
+                      </h2>
+                      <p class="mt-5 text-lg text-white/92">
+                        我們不談神話式效果。比較貼近真實的說法是：持續每天 2 湯匙，讓身體慢慢感受天然果實累積下來的細微變化。
+                      </p>
+                      </div>
+                    </div>
+                    <div class="bg-[linear-gradient(135deg,#F4FFF4,#F4EEFF)] p-8 sm:p-10">
+                      <div class="grid gap-5">
+                        <article class="rounded-[1.8rem] border border-sprout/10 bg-white p-5">
+                          <p class="text-sm uppercase tracking-[0.25em] text-leaf">建議食用</p>
+                          <ul class="mt-4 space-y-2 text-lg">
+                            <li>每日約 2 湯匙，依口味調整。</li>
+                            <li>可用 1:2 稀釋成飲品。</li>
+                            <li>也適合拌優格、加氣泡水。</li>
+                          </ul>
+                        </article>
+                        <article class="rounded-[1.8rem] border border-berry/10 bg-white p-5">
+                          <p class="text-sm uppercase tracking-[0.25em] text-berry">提醒事項</p>
+                          <ul class="mt-4 space-y-2 text-lg">
+                            <li>本品為食品，非藥品。</li>
+                            <li>腎臟病患者與特殊飲食需求者請留意自身狀況。</li>
+                            <li>開封後請冷藏並盡快食用完畢。</li>
+                          </ul>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-span-12 lg:col-span-5 lg:-ml-10 lg:pt-16">
+                <div class="reveal rounded-[2rem] border border-sprout/10 bg-dew p-6 shadow-float sm:p-8">
+                  <p class="text-sm font-semibold uppercase tracking-[0.35em] text-leaf">飲用語境</p>
+                  <h3 class="mt-4 font-serif text-3xl font-black leading-[1.35] tracking-[0.08em] text-ink">
+                    不追求神奇，
+                    <span class="block text-berry">只追求每天都願意喝。</span>
+                  </h3>
+                  <p class="mt-5">
+                    頁面溝通的重點不是誇張承諾，而是讓使用者看到原料、理解做法、放心下單。視覺上因此保留大面積白與植物綠，讓資訊自然呼吸。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="order" class="relative">
+            <div class="grid grid-cols-12 gap-y-8 lg:gap-x-8">
+              <div class="col-span-12 lg:col-span-5">
+                <div class="reveal rounded-[2.4rem] border border-sprout/10 bg-white p-7 shadow-float sm:p-9">
+                  <p class="text-sm font-semibold uppercase tracking-[0.35em] text-leaf">Order Form</p>
+                  <h2 class="mt-4 font-serif text-3xl font-black leading-[1.35] tracking-[0.1em] text-ink sm:text-4xl">
+                    價格看得懂，
+                    <span class="block text-berry">匯款資訊也能直接更新</span>
+                  </h2>
+                  <p class="mt-5">
+                    下方價格、匯款帳號與可訂上限，都從 Google Sheets 的「參數設定」讀取。未來你只改表格，不用改前端。
+                  </p>
+
+                  <div class="mt-6 grid gap-4">
+                    <article class="rounded-[1.8rem] bg-dew p-5">
+                      <p class="text-sm font-semibold text-leaf">目前價格</p>
+                      <div id="pricingCards" class="mt-3 grid gap-3"></div>
+                    </article>
+                    <article class="rounded-[1.8rem] bg-lilac p-5">
+                      <p class="text-sm font-semibold text-berry">匯款資訊</p>
+                      <div class="mt-3 space-y-2">
+                        <p>銀行：<span id="bankName" class="font-bold text-ink">讀取中...</span></p>
+                        <p>代碼：<span id="bankCode" class="font-bold text-ink">讀取中...</span></p>
+                        <p>帳號：<span id="bankAccount" class="font-bold text-ink">讀取中...</span></p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-span-12 lg:col-span-7 lg:-ml-10 lg:pt-12">
+                <div class="reveal rounded-[2.5rem] border border-sprout/10 bg-white p-7 shadow-float sm:p-9">
+                  <form id="orderForm" class="space-y-5">
+                    <div class="grid gap-5 md:grid-cols-2">
+                      <label class="block">
+                        <span class="mb-2 block text-base font-semibold">姓名</span>
+                        <input
+                          name="name"
+                          required
+                          class="w-full rounded-[1.4rem] border border-sprout/20 bg-white px-4 py-4 text-lg outline-none transition focus:border-leaf"
+                          placeholder="請輸入收件人姓名"
+                        />
+                      </label>
+                      <label class="block">
+                        <span class="mb-2 block text-base font-semibold">手機</span>
+                        <input
+                          name="phone"
+                          required
+                          inputmode="tel"
+                          pattern="09\d{8}"
+                          class="w-full rounded-[1.4rem] border border-sprout/20 bg-white px-4 py-4 text-lg outline-none transition focus:border-leaf"
+                          placeholder="09xxxxxxxx"
+                        />
+                      </label>
+                    </div>
+
+                    <div class="grid gap-5 md:grid-cols-2">
+                      <label class="block">
+                        <span class="mb-2 block text-base font-semibold">寄送超商</span>
+                        <select
+                          name="storeType"
+                          required
+                          class="w-full rounded-[1.4rem] border border-sprout/20 bg-white px-4 py-4 text-lg outline-none transition focus:border-leaf"
+                        >
+                          <option value="">請選擇</option>
+                          <option value="7-11">7-11</option>
+                          <option value="全家">全家</option>
+                        </select>
+                      </label>
+                      <label class="block">
+                        <span class="mb-2 block text-base font-semibold">店名</span>
+                        <input
+                          name="storeName"
+                          required
+                          class="w-full rounded-[1.4rem] border border-sprout/20 bg-white px-4 py-4 text-lg outline-none transition focus:border-leaf"
+                          placeholder="例如：仁愛門市"
+                        />
+                      </label>
+                    </div>
+
+                    <div class="grid gap-5 md:grid-cols-2">
+                      <label class="block">
+                        <span class="mb-2 block text-base font-semibold">訂購數量</span>
+                        <select
+                          id="quantity"
+                          name="quantity"
+                          required
+                          class="w-full rounded-[1.4rem] border border-sprout/20 bg-white px-4 py-4 text-lg outline-none transition focus:border-leaf"
+                        >
+                          <option value="1">1 罐</option>
+                          <option value="2">2 罐</option>
+                          <option value="3">3 罐</option>
+                          <option value="4">4 罐</option>
+                        </select>
+                      </label>
+                      <label class="block">
+                        <span class="mb-2 block text-base font-semibold">匯款末五碼</span>
+                        <input
+                          name="lastFiveDigits"
+                          required
+                          inputmode="numeric"
+                          pattern="\d{5}"
+                          maxlength="5"
+                          class="w-full rounded-[1.4rem] border border-sprout/20 bg-white px-4 py-4 text-lg outline-none transition focus:border-leaf"
+                          placeholder="請輸入 5 碼"
+                        />
+                      </label>
+                    </div>
+
+                    <div class="rounded-[2rem] border border-sprout/10 bg-dew p-5">
+                      <div class="flex items-center justify-between gap-4">
+                        <p class="font-semibold">本次應匯金額</p>
+                        <p id="totalAmount" class="text-3xl font-black text-berry">NT$650</p>
+                      </div>
+                      <p id="priceHint" class="mt-2 text-ink/78">1 罐原價方案</p>
+                    </div>
+
+                    <div class="space-y-3">
+                      <button
+                        type="submit"
+                        class="inline-flex w-full items-center justify-center rounded-full bg-sprout px-7 py-4 text-lg font-semibold text-white transition hover:bg-leaf disabled:cursor-not-allowed disabled:opacity-60"
+                      >
+                        送出訂單
+                      </button>
+                      <p id="formMessage" class="text-base text-ink/76"></p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div
+      id="successModal"
+      class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-leaf/20 px-5 opacity-0 transition duration-300"
+      aria-hidden="true"
+    >
+      <div class="w-full max-w-lg rounded-[2rem] border border-sprout/10 bg-white p-8 text-center shadow-float">
+        <p class="text-sm font-semibold uppercase tracking-[0.35em] text-leaf">Mock Success</p>
+        <h3 class="mt-4 font-serif text-3xl font-black tracking-[0.08em] text-leaf">（模擬）感謝訂購！</h3>
+        <p class="mt-4 text-lg text-ink">
+          林理事長的誠心製作，即將為您準備。
+        </p>
+        <button
+          id="closeModal"
+          type="button"
+          class="mt-6 inline-flex rounded-full bg-sprout px-6 py-3 text-base font-semibold text-white transition hover:bg-leaf"
+        >
+          關閉
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const isMockMode = true; // Google Sheets / LINE Messaging API MOCK 測試開關
+
+      const APP = {
+        gasUrl: "https://script.google.com/macros/s/REPLACE_WITH_YOUR_DEPLOYMENT_ID/exec",
+        config: {
+          stockStatus: "少量供應",
+          price1: 650,
+          price2Plus: 600,
+          bundle4: 2200,
+          maxQty: 4,
+          bankName: "花青果收款帳戶",
+          bankCode: "700",
+          bankAccount: "1234-5678-9012",
+          heroImageUrl: "./hero-mulberry-ai.png",
+        },
+      };
+
+      const dom = {
+        stockStatus: document.getElementById("stockStatus"),
+        pricingCards: document.getElementById("pricingCards"),
+        bankName: document.getElementById("bankName"),
+        bankCode: document.getElementById("bankCode"),
+        bankAccount: document.getElementById("bankAccount"),
+        quantity: document.getElementById("quantity"),
+        totalAmount: document.getElementById("totalAmount"),
+        priceHint: document.getElementById("priceHint"),
+        orderForm: document.getElementById("orderForm"),
+        formMessage: document.getElementById("formMessage"),
+        successModal: document.getElementById("successModal"),
+        closeModal: document.getElementById("closeModal"),
+        heroImage: document.getElementById("heroImage"),
+      };
+
+      function currency(value) {
+        return `NT$${Number(value).toLocaleString("zh-TW")}`;
+      }
+
+      function calculateTotal(quantity, config) {
+        const qty = Number(quantity);
+
+        if (qty === 4) {
+          return {
+            total: Number(config.bundle4),
+            hint: "4 罐特惠方案",
+          };
+        }
+
+        if (qty >= 2) {
+          return {
+            total: qty * Number(config.price2Plus),
+            hint: `${qty} 罐階梯優惠，每罐 ${currency(config.price2Plus)}`,
+          };
+        }
+
+        return {
+          total: Number(config.price1),
+          hint: "1 罐原價方案",
+        };
+      }
+
+      function renderPricing(config) {
+        dom.stockStatus.textContent = config.stockStatus;
+        dom.bankName.textContent = config.bankName;
+        dom.bankCode.textContent = config.bankCode;
+        dom.bankAccount.textContent = config.bankAccount;
+        if (config.heroImageUrl) dom.heroImage.src = config.heroImageUrl;
+
+        dom.pricingCards.innerHTML = `
+          <div class="rounded-[1.4rem] border border-sprout/10 bg-white px-4 py-4">
+            <p class="text-sm text-ink/72">1 罐</p>
+            <p class="mt-1 text-2xl font-bold text-ink">${currency(config.price1)}</p>
+          </div>
+          <div class="rounded-[1.4rem] border border-sprout/10 bg-white px-4 py-4">
+            <p class="text-sm text-ink/72">2 罐起</p>
+            <p class="mt-1 text-2xl font-bold text-ink">每罐 ${currency(config.price2Plus)}</p>
+          </div>
+          <div class="rounded-[1.4rem] border border-berry/10 bg-white px-4 py-4">
+            <p class="text-sm text-ink/72">4 罐特惠</p>
+            <p class="mt-1 text-2xl font-bold text-berry">${currency(config.bundle4)}</p>
+          </div>
+        `;
+
+        const maxQty = Math.max(1, Math.min(4, Number(config.maxQty || 4)));
+        dom.quantity.innerHTML = Array.from({ length: maxQty }, (_, index) => {
+          const qty = index + 1;
+          return `<option value="${qty}">${qty} 罐</option>`;
+        }).join("");
+
+        updateAmount();
+      }
+
+      function updateAmount() {
+        const result = calculateTotal(dom.quantity.value, APP.config);
+        dom.totalAmount.textContent = currency(result.total);
+        dom.priceHint.textContent = result.hint;
+      }
+
+      function openSuccessModal() {
+        dom.successModal.classList.remove("pointer-events-none", "opacity-0");
+        dom.successModal.setAttribute("aria-hidden", "false");
+      }
+
+      function closeSuccessModal() {
+        dom.successModal.classList.add("pointer-events-none", "opacity-0");
+        dom.successModal.setAttribute("aria-hidden", "true");
+      }
+
+      async function fetchConfig() {
+        if (isMockMode || APP.gasUrl.includes("REPLACE_WITH_YOUR_DEPLOYMENT_ID")) {
+          renderPricing(APP.config);
+          dom.formMessage.textContent = isMockMode
+            ? "目前為 Mock 模式，可直接測試 Google Sheets / LINE Messaging API 的模擬流程。"
+            : "尚未綁定 GAS Web App，畫面先使用預設資料預覽。";
+          return;
+        }
+
+        try {
+          const response = await fetch(`${APP.gasUrl}?action=config&t=${Date.now()}`);
+          const data = await response.json();
+          if (!data.success) throw new Error(data.message || "設定讀取失敗");
+          APP.config = {
+            ...APP.config,
+            ...data.config,
+          };
+          renderPricing(APP.config);
+        } catch (error) {
+          console.error(error);
+          renderPricing(APP.config);
+          dom.formMessage.textContent = "目前無法即時讀取最新設定，已改用預設價格顯示。";
+        }
+      }
+
+      async function submitOrder(event) {
+        event.preventDefault();
+        dom.formMessage.textContent = "";
+
+        const submitButton = dom.orderForm.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+
+        const formData = new FormData(dom.orderForm);
+        const calculation = calculateTotal(formData.get("quantity"), APP.config);
+
+        const payload = {
+          name: formData.get("name"),
+          phone: formData.get("phone"),
+          storeType: formData.get("storeType"),
+          storeName: formData.get("storeName"),
+          lastFiveDigits: formData.get("lastFiveDigits"),
+          quantity: Number(formData.get("quantity")),
+          totalAmount: calculation.total,
+        };
+
+        try {
+          if (isMockMode) {
+            await new Promise((resolve) => setTimeout(resolve, 420));
+            dom.orderForm.reset();
+            updateAmount();
+            openSuccessModal();
+            dom.formMessage.textContent = "Mock 模式下單成功，未送出真實 API。";
+            return;
+          }
+
+          if (APP.gasUrl.includes("REPLACE_WITH_YOUR_DEPLOYMENT_ID")) {
+            throw new Error("請先填入 GAS Web App URL");
+          }
+
+          const response = await fetch(APP.gasUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+            body: JSON.stringify(payload),
+          });
+
+          const data = await response.json();
+          if (!data.success) throw new Error(data.message || "送出失敗");
+
+          dom.orderForm.reset();
+          updateAmount();
+          dom.formMessage.textContent = "訂單已送出，請依匯款資訊完成轉帳。";
+        } catch (error) {
+          console.error(error);
+          dom.formMessage.textContent = error.message || "訂單送出失敗，請稍後再試。";
+        } finally {
+          submitButton.disabled = false;
+        }
+      }
+
+      function initReveal() {
+        const elements = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+
+        elements.forEach((element) => observer.observe(element));
+      }
+
+      dom.quantity.addEventListener("change", updateAmount);
+      dom.orderForm.addEventListener("submit", submitOrder);
+      dom.closeModal.addEventListener("click", closeSuccessModal);
+      dom.successModal.addEventListener("click", (event) => {
+        if (event.target === dom.successModal) closeSuccessModal();
+      });
+
+      renderPricing(APP.config);
+      fetchConfig();
+      initReveal();
+    </script>
+  </body>
+</html>
