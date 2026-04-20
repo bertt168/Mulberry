@@ -179,14 +179,6 @@
         <!-- Gradient overlay — heavy at bottom so overlap block reads cleanly -->
         <div class="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/22 to-ink/72 pointer-events-none"></div>
 
-        <!-- Corner labels -->
-        <div class="absolute left-6 top-6 sm:left-10 sm:top-10">
-          <p class="text-sm font-semibold uppercase tracking-[0.52em] text-white/82">Mulberry Orchard Preserve</p>
-        </div>
-        <div class="absolute right-6 top-6 sm:right-10 sm:top-10">
-          <p class="text-sm uppercase tracking-[0.42em] text-white/38">Seasonal Batch · 2025</p>
-        </div>
-
         <!-- Giant background character — pure decorative -->
         <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
           <span class="font-serif font-black text-white/[0.06]"
@@ -203,17 +195,15 @@
 
             <!-- Main title card: 8 of 12 cols on desktop -->
             <div class="col-span-12 lg:col-span-8
-                        bg-white/96 p-8 sm:p-12 shadow-lift"
-                 style="backdrop-filter:blur(3px);">
+                        bg-white p-8 sm:p-12 shadow-lift">
               <div class="flex items-center gap-3 mb-5">
                 <span class="mag-rule"></span>
-                <p class="text-sm font-semibold uppercase tracking-[0.42em] text-moss">嘉義義竹 · Chiayi Yizhu</p>
+                <p class="text-sm font-semibold uppercase tracking-[0.42em] text-pine">嘉義義竹 · Chiayi Yizhu</p>
               </div>
               <h1 class="font-serif font-black leading-[1.18] tracking-[0.10em] text-pine"
                   style="font-size: clamp(2rem, 5.4vw, 4rem);">
-                抱歉，
-                <span class="block">除了品質，</span>
-                <span class="text-jam">我們沒有什麼好炫耀的。</span>
+                除了品質，
+                <span class="block text-jam">我們沒什麼好說的。</span>
               </h1>
               <p class="mt-6 max-w-lg text-pine/92 text-base leading-[2.05] font-light">
                 花青果。桑椹果粒＋濃縮原汁。嘉義義竹 15 年老欉鮮採，純冰晶糖慢熬，不加水，不靠濃縮液，只是把最直接的一口，留在你手裡。
@@ -292,7 +282,7 @@
             <h2 class="font-serif font-black leading-[1.25] tracking-[0.08em] text-pine"
                 style="font-size:clamp(1.9rem,4.2vw,3.1rem);">
               不是神話式保養品，
-              <span class="block text-jam mt-1">而是很實在的果汁。</span>
+              <span class="block text-jam mt-1">而是一罐真材實料的桑椹果粒原汁。</span>
             </h2>
             <p class="mt-6 text-pine/92 text-base leading-[2.1] max-w-lg">
               花青果想說的很簡單。讓人知道原料從哪裡來、怎麼做、為什麼喝起來這麼厚。對食品來說，誠實往往比華麗更有說服力。
@@ -418,8 +408,8 @@
                 <p class="mt-1 text-base text-pine/88">依個人口味調整</p>
               </div>
               <div class="px-6 py-5">
-                <p class="text-sm font-semibold uppercase tracking-[0.34em] text-moss">產季資訊</p>
-                <p id="stockStatus" class="mt-2 font-serif text-xl font-black tracking-[0.04em] text-pine">桑椹產季倒數，5月底前</p>
+                <p class="text-sm font-semibold uppercase tracking-[0.34em] text-moss">產季提醒</p>
+                <p id="stockStatus" class="mt-2 font-serif text-xl font-black tracking-[0.04em] text-pine">5月底截止，錯過要等明年</p>
               </div>
             </div>
           </div>
@@ -536,17 +526,17 @@
             </div>
             <h2 class="font-serif font-black leading-[1.2] tracking-[0.10em] text-pine"
                 style="font-size:clamp(2rem,5.2vw,3.6rem);">
-              價格看得懂，
-              <span class="text-jam">沒有暗藏玄機。</span>
+              三種方案，
+              <span class="text-jam">一眼看懂。</span>
             </h2>
             <p class="mt-5 text-pine/92 text-base leading-[2.1] max-w-md">
-              把三種方案直接列清楚。選好數量，就知道這次要付多少。
+              選好數量，該付多少就是多少。
             </p>
           </div>
           <div class="col-span-12 lg:col-span-4 lg:col-start-9 flex items-end">
             <div class="w-full border-t-2 border-gold/36 pt-5">
-              <p class="text-sm font-semibold uppercase tracking-[0.38em] text-moss">產季資訊</p>
-              <p id="stockStatusPricing" class="mt-2 font-serif text-xl font-black tracking-[0.04em] text-pine">桑椹產季倒數，5月底前</p>
+              <p class="text-sm font-semibold uppercase tracking-[0.38em] text-moss">產季提醒</p>
+              <p id="stockStatusPricing" class="mt-2 font-serif text-xl font-black tracking-[0.04em] text-pine">5月底截止，錯過要等明年</p>
             </div>
           </div>
         </div>
@@ -649,7 +639,7 @@
     <script>
       const APP = {
         config: {
-          stockStatus: "桑椹產季倒數，5月底前",
+          stockStatus: "5月底截止，錯過要等明年",
           price1:      650,
           price2Plus:  600,
           bundle4:     2200,
